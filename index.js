@@ -7,22 +7,22 @@ const val2 = "constはあとから変更できない";
 console.log(val2)
 let breakfast = "breakは予約後のためエラー"
 
-function sum(a,b,c) {
-    return a + b+c;
+function sum(a, b, c) {
+    return a + b + c;
 }
 
-let result = sum(10, 20,10);
+let result = sum(10, 20, 10);
 console.log(result);
 
-function multiply(a,b) {
-    return a*b;
+function multiply(a, b) {
+    return a * b;
 }
-console.log(multiply(7,9)) 
-console.log(multiply(-11,9)) 
-console.log(multiply(8,9)) 
-console.log(multiply(17,2)) 
+console.log(multiply(7, 9))
+console.log(multiply(-11, 9))
+console.log(multiply(8, 9))
+console.log(multiply(17, 2))
 
-function test (){
+function test() {
     console.log('ここは関数の内部')
     return 'テスト'
 }
@@ -37,41 +37,81 @@ test()
 // })
 // this.style.color = "blue"
 
-document.getElementById('sikaku').addEventListener('click',function(){
+document.getElementById('sikaku').addEventListener('click', function () {
     this.style.backgroundColor = "yellow"
     this.style.color = "blue"
     this.style.fontSize = "100px"
     this.style.height = "400px"
     this.style.width = "400px"
     console.log('クリック')
-    })
+})
 
 
 
-    document.getElementById('sikaku').addEventListener('wheel',function(){
-        this.style.backgroundColor = "blue"
-        this.style.color = "white"
-        this.style.fontSize = "100px"
-        this.style.height = "300px"
-        this.style.width = "300px"
-        console.log('クリック')
-        })
+document.getElementById('sikaku').addEventListener('wheel', function () {
+    this.style.backgroundColor = "blue"
+    this.style.color = "white"
+    this.style.fontSize = "100px"
+    this.style.height = "300px"
+    this.style.width = "300px"
+    console.log('クリック')
+})
 
-        document.getElementById('sikaku').addEventListener('mouseenter',function(){
-            this.style.backgroundColor = "white"
-            this.style.color = "red"
-            this.style.fontSize = "50px"
-            this.style.height = "250px"
-            this.style.width = "250px"
-            console.log('クリック')
-            })
+document.getElementById('sikaku').addEventListener('mouseenter', function () {
+    this.style.backgroundColor = "white"
+    this.style.color = "red"
+    this.style.fontSize = "50px"
+    this.style.height = "250px"
+    this.style.width = "250px"
+    console.log('クリック')
+})
 
-            
-        document.getElementById('sikaku').addEventListener('mouseleave',function(){
-            this.style.backgroundColor = "red"
-            this.style.color = "white"
-            this.style.fontSize = "50px"
-            this.style.height = "250px"
-            this.style.width = "250px"
-            console.log('クリック')
-            })
+let count = 0
+
+document.getElementById('sikaku').addEventListener('mouseleave', function () {
+    this.style.backgroundColor = "red"
+    this.style.color = "white"
+    this.style.fontSize = "50px"
+    this.style.height = "250px"
+    this.style.width = "250px"
+    console.log('クリック')
+    // if (fruit === "リンゴ") [
+    //     this.style.backgroundColor = "black"
+    // ]
+
+    if (count % 4 === 0) {
+        this.style.backgroundColor = "green"
+    } else if (count % 4 === 1) {
+        this.style.backgroundColor = "pink"
+        this.textContent = "ピンク"
+    } else if (count % 4 === 2) {
+        this.style.backgroundColor = "black"
+
+
+
+    } else if (count % 4 === 3) {
+        this.style.backgroundColor = "red"
+    }
+
+    console.log(count)
+    count = count + 1
+
+    console.log(this.textContent)
+})
+
+
+document.getElementById('maru').addEventListener('click', function () {
+    this.style.color = "blue"
+    console.log('クリック')
+    if (count % 2 === 0) {
+        this.style.backgroundColor = "green"
+    } else if (count % 2 === 1) {
+        this.style.backgroundColor = "pink"
+        this.textContent = "✖"
+    }
+    console.log(count)
+    count = count + 1
+
+    console.log(this.textContent)
+})
+
