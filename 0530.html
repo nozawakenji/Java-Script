@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hotHotday {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        ｐ447
+    </div>
+</body>
+<script>
+    // id属性を追加する（setAttribute
+    document.querySelector("div").setAttribute("id", "hot")
+    // class属性を追加
+    document.querySelector("div").setAttribute("class", "hotday")
+    // classlistで属性を追加
+    document.querySelector("div").classList.add("hotHotday")
+
+    // 削除するclassを指定する
+    // document.querySelector("div").classList.remove("hotHotday")
+    // クラスが２以上でも一気に全部消す
+    document.querySelector("div").removeAttribute("class", "hotday")
+
+
+
+
+    // P119
+    const whichCase = "case1"
+
+    switch (whichCase) {
+        case "case1":
+            console.log("case1実行");
+            break;
+
+        case "case2":
+            console.log("case2じっこう");
+            break;
+
+        default:
+            console.log("デフォルト");
+    }
+
+    // P130
+
+    let t = 0
+
+    while (t < 5) {
+        console.log(t);
+        t++
+    }
+
+    // for文使うときはletを使う
+    for (let i = 0; i < 4; i = i + 1) {
+        console.log(i)
+    }
+
+    // p135　配列の要素に対して10づつ加算
+    const numArray = [10, 20, 30];
+
+    for (let index = 0; index < numArray.length; index++) {
+        console.log(index)
+
+        numArray[index] = numArray[index] + 10;
+        console.log(index)
+    }
+    console.log(numArray);
+
+    // 2回繰り返さないのはなぜ？?????
+
+    // ｐ６５
+    let person = {
+        name: { first: "太郎", last: "次郎" },
+        age: 18
+    }
+    console.log(person.age);
+
+</script>
+
+
+</html>

@@ -1,14 +1,16 @@
 let count = 0
 
 document.getElementById('ans1').addEventListener('click', function () {
-    this.style.color = "blue"
-    this.style.fontSize = "100px"
+    // this.style.color = "blue"
+    // this.style.fontSize = "100px"
     this.textContent = "✖"
+    this.setAttribute('class','fuseikai')
     console.log(count)
     count = count + 1
     if (count % 2 === 0) {
-        this.style.fontSize = "150px"
+      this.style.fontSize = "50px"
         this.textContent = "違うよ"
+        
     }
 })
 let count1 = 0

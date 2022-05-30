@@ -31,13 +31,25 @@
 
 
         <p>●</p>
-    </div>
-
-
+        <!-- ここに新しい要素を追加したい     -->
+        <div id="test">
+            <p>test</p>
+        </div>
+        <!-- // java ScriptだけでHTML がかける -->
 </head>
 
 <body>
+    
+    <script>
+        // <div></div>を作って、newDivという変数に入れる
+        const newDiv = document.createElement("div");
+        // textContentで文字列を追加
+        newDiv.textContent = "hello World";
+        // p433 prependで　newDivをbodyの最初の子要素として追加する
+        // document.body.prepend(newDiv);
+        document.getElementById('test').prepend(newDiv)
 
+    </script>
 </body>
 
 </html>
