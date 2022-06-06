@@ -1,0 +1,48 @@
+8<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // p136練習問題５．８
+        const array=[10,20,23,47];
+// 合計値を覚えさせる変数
+let sum = 0 ;
+
+for(let i = 0; i < array.length; i++){
+    // arrayから1個ずつ取り出す
+console.log(array[i]);
+// 取り出した値を今あるsumに加える
+sum = sum + array[i];
+}
+console.log(sum)
+
+// p14１　for…of文
+const fruits =["リンゴ","バナナ","オレンジ"];
+for(const value of fruits){
+    console.log(value)
+}
+// const valueのところは何でもよい
+for(const v of fruits){
+    console.log(v)
+}
+
+// 配列が複数形の時は、単数形がいいかも
+for(const float of fruits){
+    console.log(float)
+}
+
+// for of 文で練習5.8
+sum = 0 ;
+for(const number of array){
+    console.log(number)
+ sum=sum+number
+ console.log(sum)   
+}
+
+
