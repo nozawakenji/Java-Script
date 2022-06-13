@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- P458 イベントリスナにアクションを登録 -->
+<div>
+    <button id="minus">-</button>
+    <button id="number">0</button>
+    <button id="plus">+</button>
+</div>
+<script>
+// 数値の初期化
+let count=0;
+// elementの取得
+
+    // const number = document.querySelector("#number"); 下記でも可
+    const number= document.getElementById("number")
+    const plusBtn = document.querySelector("#plus");
+    const minusBtn = document.querySelector("#minus");
+plusBtn.addEventListener("click",function(event){
+    // 何かわからないものは表示してみる↓
+    console.log(event);
+    // イベントｵﾌﾞｼﾞｪｸﾄ　今回のクリック、イベントの情報　
+    // イベントが起きた時のキー入力の内容などが入る。
+    // そういう情報が不要なら入れる必要はない。
+    count++;
+    // 数値を１加算する
+    number.textContent=count;
+    // #numberのテキストを更新
+});
+
+minusBtn.addEventListener("click",function(event){
+    count--;
+    // 数値を１減算する
+    number.textContent=count;
+    // #numberのテキストを更新
+});
+
+
+</script>
+
+</body>
+</html>

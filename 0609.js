@@ -18,18 +18,25 @@ const zannen = "残念"
 
 // 関数名は動詞＋名詞でつけることが多い。 
 const makeFuseikai = function (idName) {
+const DGEBIi = document.getElementById(idName)
 
     document.getElementById(idName).addEventListener('click', function () {
         // this.textContent = "不正解"
-        this.textContent = fuseikai;
-        this.setAttribute('class', 'fuseikai');
+        DGEBIi.textContent = fuseikai;
+        DGEBIi.setAttribute('class', 'fuseikai');
     })
 }
 
 const makeSeikai = function (idName) {
-    document.getElementById(idName).addEventListener('click', function () {
+    const answerEL = document.getElementById(idName)
+
+    function answerChange =() =>{
+        answerEL.textContent =
+    }
+    answerEL.addEventListener('click', function () {
+
         // this.textContent = "正解"
-        this.textContent = seikai
+        DGEBIi.textContent = seikai
     })
 }
 
